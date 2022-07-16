@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class KMartController {
 
     //TODO: Need to add Swagger documentation
+    //TODO: Replace the below endpoint by Spring Boot actuator
     @GetMapping("/healthcheck")
     public ResponseEntity<String> healthCheck() {
         return new ResponseEntity<>("I am alive", HttpStatus.OK);
-        
+
     }
 }
