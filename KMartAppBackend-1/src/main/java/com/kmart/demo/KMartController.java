@@ -14,5 +14,6 @@ public class KMartController {
     @GetMapping("/healthcheck")
     public ResponseEntity<String> healthCheck() {
         return new ResponseEntity<>("I am alive", HttpStatus.OK);
+        
     }
 }
