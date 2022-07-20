@@ -1,5 +1,6 @@
 package com.kmart.demo;
 
+import com.kmart.demo.annotations.ValidProduct;
 import com.kmart.demo.dto.Product;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ public class KMartController {
     //TODO: Add Swagger Documentation
     //TODO: Handle 404 and other status codes
     @PostMapping("/item")
+    @ValidProduct
     public ResponseEntity<Product> processItem(@RequestBody Product product){
         return new ResponseEntity<>(null,HttpStatus.OK);
     }
